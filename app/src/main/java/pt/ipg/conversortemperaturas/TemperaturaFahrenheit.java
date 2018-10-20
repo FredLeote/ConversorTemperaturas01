@@ -1,6 +1,10 @@
 package pt.ipg.conversortemperaturas;
 
 public class TemperaturaFahrenheit extends Temperatura {
+    public TemperaturaFahrenheit(double valor) {
+        this.valor = valor;
+    }
+
     /**
      * Devolve a temperatura em graus Fahrenheit
      *
