@@ -25,8 +25,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                mostraTemperaturas();
             }
         });
     }
@@ -53,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void mostraTemperaturas(View view) {
+    public void mostraTemperaturas() {
         EditText editTextTemperatura = (EditText) findViewById(R.id.editTextTemperatura);
         RadioButton radioButtonFahrenheit = (RadioButton) findViewById(R.id.radioButtonFahrenheit);
 
