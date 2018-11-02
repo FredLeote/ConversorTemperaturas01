@@ -35,10 +35,15 @@ public class MostraTemperaturasActivity extends AppCompatActivity {
         double celsius = AppData.temperatura.getCelsius();
         double fahrenheit = AppData.temperatura.getFahrenheit();
 
-        DecimalFormat df = new DecimalFormat("#.##");
+        /*DecimalFormat df = new DecimalFormat("#.##");
 
         textViewCelsius.setText(df.format(celsius));
-        textViewFahrenheit.setText(df.format(fahrenheit));
+        textViewFahrenheit.setText(df.format(fahrenheit));*/
+
+        textViewCelsius.setText(String.format("%.2f", celsius));
+        textViewFahrenheit.setText(String.format("%.2f", fahrenheit));
+
+
 
     }
 }
