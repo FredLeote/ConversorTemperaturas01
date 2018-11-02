@@ -60,6 +60,12 @@ public class MainActivity extends AppCompatActivity {
         String s = editTextTemperatura.getText().toString();
         double valorTemperatura = Double.parseDouble(s);
 
+        if(s.isEmpty()) {
+            editTextTemperatura.setError("Por favor preencha a temperatura");
+            editTextTemperatura.requestFocus();
+            return;
+        }
+
         if (radioButtonFahrenheit.isChecked()) {
             AppData.temperatura = new TemperaturaFahrenheit(valorTemperatura);
         } else {
