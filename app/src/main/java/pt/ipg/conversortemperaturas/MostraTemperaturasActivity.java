@@ -41,5 +41,4 @@ public class MostraTemperaturasActivity extends AppCompatActivity {
         textViewFahrenheit.setText(df.format(fahrenheit));
 
     }
-
 }
