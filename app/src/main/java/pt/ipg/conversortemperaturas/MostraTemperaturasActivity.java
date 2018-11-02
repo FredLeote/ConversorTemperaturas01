@@ -27,7 +27,7 @@ public class MostraTemperaturasActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         TextView textViewCelsius = (TextView) findViewById(R.id.textViewCelsius);
         TextView textViewFahrenheit = (TextView) findViewById(R.id.textViewFahrenheit);
