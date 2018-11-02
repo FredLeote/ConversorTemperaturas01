@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.RadioButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -52,8 +54,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void mostraTemperaturas(View view) {
-        Intent intent = new Intent(this, MostraTemperaturasActivity.class);
+        EditText editTextTemperatura = (EditText) findViewById(R.id.editTextTemperatura);
+        RadioButton radioButtonFahrenheit = (RadioButton) findViewById(R.id.radioButtonFahrenheit);
 
+        String s = editTextTemperatura.getText().toString();
+        double valorTemperatura = Double.parseDouble(s);
+
+        if (radioButtonFahrenheit.isChecked()) {
+            AppData.temperatura = new TemperaturaFahrenheit(valorTemperatura);
+        } else {
+            AppData.temperatura = new TemperaturaCelsius(valorTemperatura);
+        }
+
+        Intent intent = new Intent(this, MostraTemperaturasActivity.class);
         startActivity(intent);
     }
 }
