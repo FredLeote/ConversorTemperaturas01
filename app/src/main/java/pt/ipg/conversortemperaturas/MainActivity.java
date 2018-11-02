@@ -58,12 +58,18 @@ public class MainActivity extends AppCompatActivity {
         RadioButton radioButtonFahrenheit = (RadioButton) findViewById(R.id.radioButtonFahrenheit);
 
         String s = editTextTemperatura.getText().toString();
-        double valorTemperatura = Double.parseDouble(s);
 
         if(s.isEmpty()) {
             editTextTemperatura.setError("Por favor preencha a temperatura");
             editTextTemperatura.requestFocus();
             return;
+        }
+
+        double valorTemperatura = 0;
+        try {
+            valorTemperatura = Double.parseDouble(s);
+        } catch (NumberFormatException e) {
+            editTextTemperatura.setError("Valor de temperatura inválido");
         }
 
         if (radioButtonFahrenheit.isChecked()) {
