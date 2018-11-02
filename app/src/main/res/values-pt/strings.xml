@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Conversor de Temperaturas</string>
+    <string name="action_settings">Configurações</string>
+    <string name="title_activity_mostra_temperaturas">Temperaturas</string>
+    <string name="temperature">Temperatura</string>
+    <string name="unit">Unidade</string>
+    <string name="insira_temperatura">Por favor insira um valor</string>
+    <string name="temperatura_invalida">Valor de temperatura inválido</string>
+</resources>

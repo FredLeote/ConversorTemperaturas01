@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         String s = editTextTemperatura.getText().toString();
 
         if(s.isEmpty()) {
-            editTextTemperatura.setError("Por favor preencha a temperatura");
+            editTextTemperatura.setError(getString(R.string.insira_temperatura));
             editTextTemperatura.requestFocus();
             return;
         }
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             valorTemperatura = Double.parseDouble(s);
         } catch (NumberFormatException e) {
-            editTextTemperatura.setError("Valor de temperatura inválido");
+            editTextTemperatura.setError(getString(R.string.temperatura_invalida));
             editTextTemperatura.requestFocus();
             return;
         }
