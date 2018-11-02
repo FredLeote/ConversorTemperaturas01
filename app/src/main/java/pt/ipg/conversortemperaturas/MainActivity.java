@@ -70,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
             valorTemperatura = Double.parseDouble(s);
         } catch (NumberFormatException e) {
             editTextTemperatura.setError("Valor de temperatura inválido");
+            editTextTemperatura.requestFocus();
+            return;
         }
 
         if (radioButtonFahrenheit.isChecked()) {
